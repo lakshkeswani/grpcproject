@@ -1,0 +1,1794 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "project/projectpb/project.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "UserService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/createDriver": {
+      "post": {
+        "operationId": "UserService_CreateDriver",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateDriverResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateDriverRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createbooking": {
+      "post": {
+        "operationId": "UserService_CreateBooking",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateBookingResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateBookingRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createbusRouteStop": {
+      "post": {
+        "operationId": "UserService_CreateBusRouteStop",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateBusRouteStopResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateBusRouteStopRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createroute": {
+      "post": {
+        "operationId": "UserService_CreateRoute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateRouteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateRouteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createstation": {
+      "post": {
+        "operationId": "UserService_CreateStation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateStationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateStationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createtrip": {
+      "post": {
+        "operationId": "UserService_CreateTrip",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateTripResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateTripRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createuser": {
+      "post": {
+        "operationId": "UserService_CreateUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateUserRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/createvehicle": {
+      "post": {
+        "operationId": "UserService_CreateVehicle",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectCreateVehicleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectCreateVehicleRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deleteDriver/{DriverId}": {
+      "delete": {
+        "operationId": "UserService_DeleteDriver",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteDriverResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "DriverId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deletebooking/{bookingId}": {
+      "delete": {
+        "operationId": "UserService_DeleteBooking",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteBookingResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deletebusRouteStop/{busRouteStopId}": {
+      "delete": {
+        "operationId": "UserService_DeleteBusRouteStop",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteBusRouteStopResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "busRouteStopId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deleteroute/{routeId}": {
+      "delete": {
+        "operationId": "UserService_DeleteRoute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteRouteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "routeId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deletestation/{stationId}": {
+      "delete": {
+        "operationId": "UserService_DeleteStation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteStationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "stationId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deletetrip/{tripId}": {
+      "delete": {
+        "operationId": "UserService_DeleteTrip",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteTripResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tripId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deleteuser/{userId}": {
+      "delete": {
+        "operationId": "UserService_DeleteUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/deletevehicle/{vehicleId}": {
+      "delete": {
+        "operationId": "UserService_DeleteVehicle",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDeleteVehicleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/driverlogin": {
+      "post": {
+        "operationId": "UserService_LoginDriver",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectLoginResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectLoginRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/driverlogout/{UserId}": {
+      "get": {
+        "summary": "Logout user and driver",
+        "operationId": "UserService_Driverlogout",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectDriverLogoutResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/login": {
+      "post": {
+        "operationId": "UserService_LoginUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectLoginResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectLoginRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readbooking/{bookingId}": {
+      "get": {
+        "operationId": "UserService_ReadBooking",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadBookingResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readbusRouteStop/{busRouteStopId}": {
+      "get": {
+        "operationId": "UserService_ReadBusRouteStop",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadBusRouteStopResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "busRouteStopId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readriver/{DriverId}": {
+      "get": {
+        "operationId": "UserService_ReadDriver",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadDriverResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "DriverId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readroute/{routeId}": {
+      "get": {
+        "operationId": "UserService_ReadRoute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadRouteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "routeId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readstation/{stationId}": {
+      "get": {
+        "operationId": "UserService_ReadStation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadStationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "stationId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readtrip/{tripId}": {
+      "get": {
+        "operationId": "UserService_ReadTrip",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadTripResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tripId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readuser/{userId}": {
+      "get": {
+        "operationId": "UserService_ReadUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/readvehicle/{vehicleId}": {
+      "get": {
+        "operationId": "UserService_ReadVehicle",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectReadVehicleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatebooking": {
+      "put": {
+        "operationId": "UserService_UpdateBooking",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateBookingResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateBookingRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatebusRouteStop": {
+      "put": {
+        "operationId": "UserService_UpdateBusRouteStop",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateBusRouteStopResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateBusRouteStopRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatedriver": {
+      "put": {
+        "operationId": "UserService_UpdateDriver",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateDriverResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateDriverRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updateroute": {
+      "put": {
+        "operationId": "UserService_UpdateRoute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateRouteResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateRouteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatestation": {
+      "put": {
+        "operationId": "UserService_UpdateStation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateStationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateStationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatetrip": {
+      "put": {
+        "operationId": "UserService_UpdateTrip",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateTripResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateTripRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updateuser": {
+      "put": {
+        "operationId": "UserService_UpdateUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateUserResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateUserRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/updatevehicle": {
+      "put": {
+        "operationId": "UserService_UpdateVehicle",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUpdateVehicleResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/projectUpdateVehicleRequest"
+            }
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    },
+    "/userlogout/{UserId}": {
+      "get": {
+        "operationId": "UserService_Userlogout",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/projectUserLogoutResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "UserService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "projectBooking": {
+      "type": "object",
+      "properties": {
+        "BookingId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "UserId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "TripId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "Fare": {
+          "type": "string",
+          "format": "int64"
+        },
+        "PickupTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "DropOffTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "PickupStopId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "DropOffStopId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "Status": {
+          "type": "string"
+        }
+      }
+    },
+    "projectBusRouteStop": {
+      "type": "object",
+      "properties": {
+        "BusRouteStopId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "RouteID": {
+          "type": "string",
+          "format": "int64"
+        },
+        "VehicleId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "StationId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "StopNum": {
+          "type": "string",
+          "format": "int64"
+        },
+        "StartTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "EndTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "projectCreateBookingRequest": {
+      "type": "object",
+      "properties": {
+        "booking": {
+          "$ref": "#/definitions/projectBooking"
+        }
+      }
+    },
+    "projectCreateBookingResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateBusRouteStopRequest": {
+      "type": "object",
+      "properties": {
+        "busRouteStop": {
+          "$ref": "#/definitions/projectBusRouteStop"
+        }
+      }
+    },
+    "projectCreateBusRouteStopResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateDriverRequest": {
+      "type": "object",
+      "properties": {
+        "driver": {
+          "$ref": "#/definitions/projectDriver"
+        }
+      }
+    },
+    "projectCreateDriverResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateRouteRequest": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "$ref": "#/definitions/projectRoute"
+        }
+      }
+    },
+    "projectCreateRouteResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateStationRequest": {
+      "type": "object",
+      "properties": {
+        "station": {
+          "$ref": "#/definitions/projectStation"
+        }
+      }
+    },
+    "projectCreateStationResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateTripRequest": {
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/projectTrip"
+        }
+      }
+    },
+    "projectCreateTripResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateUserRequest": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/projectUser"
+        }
+      }
+    },
+    "projectCreateUserResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCreateVehicleRequest": {
+      "type": "object",
+      "properties": {
+        "vehicle": {
+          "$ref": "#/definitions/projectVehicle"
+        }
+      }
+    },
+    "projectCreateVehicleResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectCredentials": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteBookingResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteBusRouteStopResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteDriverResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteRouteResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteStationResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteTripResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteUserResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDeleteVehicleResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDriver": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "ContactNo": {
+          "type": "string"
+        }
+      }
+    },
+    "projectDriverLogoutResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectLoginRequest": {
+      "type": "object",
+      "properties": {
+        "userCredentials": {
+          "$ref": "#/definitions/projectCredentials"
+        }
+      }
+    },
+    "projectLoginResponse": {
+      "type": "object",
+      "properties": {
+        "jwt": {
+          "type": "string"
+        }
+      }
+    },
+    "projectReadBookingResponse": {
+      "type": "object",
+      "properties": {
+        "booking": {
+          "$ref": "#/definitions/projectBooking"
+        }
+      }
+    },
+    "projectReadBusRouteStopResponse": {
+      "type": "object",
+      "properties": {
+        "busRouteStop": {
+          "$ref": "#/definitions/projectBusRouteStop"
+        }
+      }
+    },
+    "projectReadDriverResponse": {
+      "type": "object",
+      "properties": {
+        "driver": {
+          "$ref": "#/definitions/projectDriver"
+        }
+      }
+    },
+    "projectReadRouteResponse": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "$ref": "#/definitions/projectRoute"
+        }
+      }
+    },
+    "projectReadStationResponse": {
+      "type": "object",
+      "properties": {
+        "station": {
+          "$ref": "#/definitions/projectStation"
+        }
+      }
+    },
+    "projectReadTripResponse": {
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/projectTrip"
+        }
+      }
+    },
+    "projectReadUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/projectUser"
+        }
+      }
+    },
+    "projectReadVehicleResponse": {
+      "type": "object",
+      "properties": {
+        "vehicle": {
+          "$ref": "#/definitions/projectVehicle"
+        }
+      }
+    },
+    "projectRoute": {
+      "type": "object",
+      "properties": {
+        "RouteId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "RouteName": {
+          "type": "string"
+        }
+      }
+    },
+    "projectStation": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "projectTrip": {
+      "type": "object",
+      "properties": {
+        "TripId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "DriverId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "BusRouteStopId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "Fare": {
+          "type": "string",
+          "format": "int64"
+        },
+        "ScheduleDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "projectUpdateBookingRequest": {
+      "type": "object",
+      "properties": {
+        "booking": {
+          "$ref": "#/definitions/projectBooking"
+        }
+      }
+    },
+    "projectUpdateBookingResponse": {
+      "type": "object",
+      "properties": {
+        "booking": {
+          "$ref": "#/definitions/projectBooking"
+        }
+      }
+    },
+    "projectUpdateBusRouteStopRequest": {
+      "type": "object",
+      "properties": {
+        "busRouteStop": {
+          "$ref": "#/definitions/projectBusRouteStop"
+        }
+      }
+    },
+    "projectUpdateBusRouteStopResponse": {
+      "type": "object",
+      "properties": {
+        "busRouteStop": {
+          "$ref": "#/definitions/projectBusRouteStop"
+        }
+      }
+    },
+    "projectUpdateDriverRequest": {
+      "type": "object",
+      "properties": {
+        "driver": {
+          "$ref": "#/definitions/projectDriver"
+        }
+      }
+    },
+    "projectUpdateDriverResponse": {
+      "type": "object",
+      "properties": {
+        "driver": {
+          "$ref": "#/definitions/projectDriver"
+        }
+      }
+    },
+    "projectUpdateRouteRequest": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "$ref": "#/definitions/projectRoute"
+        }
+      }
+    },
+    "projectUpdateRouteResponse": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "$ref": "#/definitions/projectRoute"
+        }
+      }
+    },
+    "projectUpdateStationRequest": {
+      "type": "object",
+      "properties": {
+        "station": {
+          "$ref": "#/definitions/projectStation"
+        }
+      }
+    },
+    "projectUpdateStationResponse": {
+      "type": "object",
+      "properties": {
+        "station": {
+          "$ref": "#/definitions/projectStation"
+        }
+      }
+    },
+    "projectUpdateTripRequest": {
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/projectTrip"
+        }
+      }
+    },
+    "projectUpdateTripResponse": {
+      "type": "object",
+      "properties": {
+        "trip": {
+          "$ref": "#/definitions/projectTrip"
+        }
+      }
+    },
+    "projectUpdateUserRequest": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/projectUser"
+        }
+      }
+    },
+    "projectUpdateUserResponse": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/projectUser"
+        }
+      }
+    },
+    "projectUpdateVehicleRequest": {
+      "type": "object",
+      "properties": {
+        "vehicle": {
+          "$ref": "#/definitions/projectVehicle"
+        }
+      }
+    },
+    "projectUpdateVehicleResponse": {
+      "type": "object",
+      "properties": {
+        "vehicle": {
+          "$ref": "#/definitions/projectVehicle"
+        }
+      }
+    },
+    "projectUser": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        },
+        "Firstname": {
+          "type": "string"
+        },
+        "Lastname": {
+          "type": "string"
+        }
+      }
+    },
+    "projectUserLogoutResponse": {
+      "type": "object",
+      "properties": {
+        "Result": {
+          "type": "string"
+        }
+      }
+    },
+    "projectVehicle": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "int64"
+        },
+        "VehicleType": {
+          "type": "string"
+        },
+        "Capacity": {
+          "type": "string",
+          "format": "int64"
+        },
+        "RegistrationNo": {
+          "type": "string"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}

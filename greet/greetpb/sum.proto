@@ -1,0 +1,17 @@
+syntax="proto3";
+package greet;
+option go_package="./greet/greetpb";
+message DoSum {
+  int32 a =1;
+ int32  b=2;
+}
+message doSumRequest{
+  DoSum dosum=1;
+}
+message doSumResponse
+{
+  int32 sum=1;
+}
+service doSumService{
+  rpc Sum(doSumRequest) returns (doSumResponse);
+}

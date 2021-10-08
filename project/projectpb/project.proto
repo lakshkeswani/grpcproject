@@ -1,0 +1,549 @@
+syntax="proto3";
+package  project;
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package="./project/projectpb";
+message User{
+  int64 Id=1;
+  string Email=2;
+  string Password=3;
+  string Firstname=4;
+  string Lastname=5;
+}
+message  Credentials{
+  string username=1;
+  string password=2;
+
+}
+message LoginRequest{
+  Credentials userCredentials=1;
+}
+message LoginResponse{
+  string jwt=1;
+}
+message CreateUserRequest{
+  User user=1;
+}
+message CreateUserResponse{
+  string Result=1;
+}
+
+message ReadUserRequest{
+  int64 user_id=1;
+}
+message ReadUserResponse{
+  User user=1;
+}
+message DeleteUserRequest{
+  int64 user_id=1;
+}
+message DeleteUserResponse{
+  string result=1;
+}
+
+message UpdateUserRequest{
+  User user=1;
+}
+message UpdateUserResponse{
+  User user=1;
+}
+
+message DriverLoginRequest{
+  Credentials userCredentials=1;
+}
+message DriverLoginResponse{
+  string jwt=1;
+}
+message Driver{
+  int64 Id=1;
+  string Email=2;
+  string Password=3;
+  string Name=4;
+  string ContactNo=5;
+}
+message CreateDriverRequest{
+  Driver driver=1;
+}
+message CreateDriverResponse{
+  string Result=1;
+}
+
+message ReadDriverRequest{
+  int64 Driver_id=1;
+}
+message ReadDriverResponse{
+  Driver driver=1;
+}
+message DeleteDriverRequest{
+  int64 Driver_id=1;
+}
+message DeleteDriverResponse{
+  string result=1;
+}
+
+message UpdateDriverRequest{
+  Driver driver=1;
+}
+message UpdateDriverResponse{
+  Driver driver=1;
+}
+message Vehicle {
+  int64 id=1;
+  string  VehicleType=2 ;
+  int64 Capacity      =3;
+  string  RegistrationNo =4;
+}
+
+message CreateVehicleRequest{
+  Vehicle vehicle=1;
+}
+message CreateVehicleResponse{
+  string Result=1;
+}
+
+message ReadVehicleRequest{
+  int64 vehicle_id=1;
+}
+message ReadVehicleResponse{
+  Vehicle vehicle=1;
+}
+message DeleteVehicleRequest{
+  int64 vehicle_id=1;
+}
+message DeleteVehicleResponse{
+  string result=1;
+}
+
+message UpdateVehicleRequest{
+  Vehicle vehicle=1;
+}
+message UpdateVehicleResponse{
+  Vehicle vehicle=1;
+}
+message Station{
+  int64 ID=1;
+  string name=2;
+}
+message CreateStationRequest{
+  Station station=1;
+}
+message CreateStationResponse{
+  string Result=1;
+}
+
+message ReadStationRequest{
+  int64 station_id=1;
+}
+message ReadStationResponse{
+  Station station=1;
+}
+message DeleteStationRequest{
+  int64 station_id=1;
+}
+message DeleteStationResponse{
+  string result=1;
+}
+
+message UpdateStationRequest{
+  Station station=1;
+}
+message UpdateStationResponse{
+  Station station=1;
+}
+
+message Route{
+  int64 RouteId=1 ;
+  string  RouteName=2;
+
+}
+message CreateRouteRequest{
+  Route route=1;
+}
+message CreateRouteResponse{
+  string Result=1;
+}
+
+message ReadRouteRequest{
+  int64 route_id=1;
+}
+message ReadRouteResponse{
+  Route route=1;
+}
+message DeleteRouteRequest{
+  int64 route_id=1;
+}
+message DeleteRouteResponse{
+  string result=1;
+}
+
+message UpdateRouteRequest{
+  Route route=1;
+}
+message UpdateRouteResponse{
+  Route route=1;
+}
+message BusRouteStop{
+  int64  BusRouteStopId=1;
+  int64 RouteID=2 ;
+  int64 VehicleId=3;
+  int64 StationId=4;
+  int64 StopNum=5;
+  google.protobuf.Timestamp StartTime=6;
+  google.protobuf.Timestamp EndTime=7;
+
+}
+message CreateBusRouteStopRequest{
+  BusRouteStop busRouteStop=1;
+}
+message CreateBusRouteStopResponse{
+  string Result=1;
+}
+
+message ReadBusRouteStopRequest{
+  int64 busRouteStop_id=1;
+}
+message ReadBusRouteStopResponse{
+  BusRouteStop busRouteStop=1;
+}
+message DeleteBusRouteStopRequest{
+  int64 busRouteStop_id=1;
+}
+message DeleteBusRouteStopResponse{
+  string result=1;
+}
+
+message UpdateBusRouteStopRequest{
+  BusRouteStop busRouteStop=1;
+}
+message UpdateBusRouteStopResponse{
+  BusRouteStop busRouteStop=1;
+}
+
+message Trip{
+  int64 TripId=1 ;
+  int64 DriverId=2;
+  int64 BusRouteStopId =3;
+  int64 Fare =4;
+  google.protobuf.Timestamp ScheduleDate=6;
+}
+message CreateTripRequest{
+  Trip trip=1;
+}
+message CreateTripResponse{
+  string Result=1;
+}
+
+message ReadTripRequest{
+  int64 trip_id=1;
+}
+message ReadTripResponse{
+  Trip trip=1;
+}
+message DeleteTripRequest{
+  int64 trip_id=1;
+}
+message DeleteTripResponse{
+  string result=1;
+}
+
+message UpdateTripRequest{
+  Trip trip=1;
+}
+message UpdateTripResponse{
+  Trip trip=1;
+}
+
+
+
+message Booking{
+  int64 BookingId=1 ;
+  int64 UserId=2;
+  int64 TripId =3;
+  int64 Fare =4;
+  google.protobuf.Timestamp PickupTime=5;
+  google.protobuf.Timestamp DropOffTime =6;
+  int64 PickupStopId =7;
+  int64 DropOffStopId =8;
+  string  Status =9;
+}
+message CreateBookingRequest{
+  Booking booking=1;
+}
+message CreateBookingResponse{
+  string Result=1;
+}
+message GetAllBookingByUserRequest{
+  int64  User_id=1;
+}
+
+message GetAllBookingByUserResponse{
+repeated Booking Bookings=1;
+}
+message ReadBookingRequest{
+  int64 booking_id=1;
+}
+message ReadBookingResponse{
+  Booking booking=1;
+}
+message DeleteBookingRequest{
+  int64 booking_id=1;
+}
+message DeleteBookingResponse{
+  string result=1;
+}
+
+message UpdateBookingRequest{
+  Booking booking=1;
+}
+message UpdateBookingResponse{
+  Booking booking = 1;
+}
+
+  message UserLogoutRequest{
+    int64 User_id=1;
+  }
+  message UserLogoutResponse{
+    string Result=1;
+  }
+
+  message DriverLogoutRequest{
+    int64 User_id=1;
+  }
+  message DriverLogoutResponse{
+    string Result=1;
+  }
+
+service UserService{
+  //user api's
+  rpc LoginUser(LoginRequest) returns (LoginResponse){
+    option (google.api.http)={
+      post:"/login"
+      body:"*"
+    };
+  };
+
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse){
+    option (google.api.http)={
+      post:"/createuser"
+      body:"*"
+    };
+  };
+
+  rpc ReadUser(ReadUserRequest) returns (ReadUserResponse){
+    option (google.api.http)={
+      get:"/readuser/{user_id}"
+    };
+  };
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse){
+    option (google.api.http)={
+      put:"/updateuser"
+      body:"*"
+    };
+  };
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse){
+    option (google.api.http)={
+      delete:"/deleteuser/{user_id}"
+    };
+  };
+
+  //Driver api's
+
+  rpc CreateDriver(CreateDriverRequest) returns (CreateDriverResponse){
+    option (google.api.http)={
+      post:"/createDriver"
+      body:"*"
+    };
+  };
+  rpc LoginDriver(LoginRequest) returns (LoginResponse){
+    option (google.api.http)={
+      post:"/driverlogin"
+      body:"*"
+    };
+  };
+  rpc ReadDriver(ReadDriverRequest) returns (ReadDriverResponse){
+    option (google.api.http)={
+      get:"/readriver/{Driver_id}"
+    };
+  };
+  rpc UpdateDriver(UpdateDriverRequest) returns (UpdateDriverResponse){
+    option (google.api.http)={
+      put:"/updatedriver"
+      body:"*"
+    };
+  };
+  rpc DeleteDriver(DeleteDriverRequest) returns (DeleteDriverResponse){
+    option (google.api.http)={
+      delete:"/deleteDriver/{Driver_id}"
+    };
+  };
+//Vehicle ap's
+  rpc CreateVehicle(CreateVehicleRequest) returns (CreateVehicleResponse){
+    option (google.api.http)={
+      post:"/createvehicle"
+      body:"*"
+    };
+  };
+  rpc ReadVehicle(ReadVehicleRequest) returns (ReadVehicleResponse){
+    option (google.api.http)={
+      get:"/readvehicle/{vehicle_id}"
+    };
+  };
+  rpc UpdateVehicle(UpdateVehicleRequest) returns (UpdateVehicleResponse){
+    option (google.api.http)={
+      put:"/updatevehicle"
+      body:"*"
+    };
+  };
+  rpc DeleteVehicle(DeleteVehicleRequest) returns (DeleteVehicleResponse){
+    option (google.api.http)={
+      delete:"/deletevehicle/{vehicle_id}"
+    };
+  };
+
+  //Station api's
+  rpc CreateStation(CreateStationRequest) returns (CreateStationResponse){
+    option (google.api.http)={
+      post:"/createstation"
+      body:"*"
+    };
+  };
+
+  rpc ReadStation(ReadStationRequest) returns (ReadStationResponse){
+    option (google.api.http)={
+      get:"/readstation/{station_id}"
+    };
+  };
+  rpc UpdateStation(UpdateStationRequest) returns (UpdateStationResponse){
+    option (google.api.http)={
+      put:"/updatestation"
+      body:"*"
+    };
+  };
+  rpc DeleteStation(DeleteStationRequest) returns (DeleteStationResponse){
+    option (google.api.http)={
+      delete:"/deletestation/{station_id}"
+    };
+  };
+//Route Api's
+
+  rpc CreateRoute(CreateRouteRequest) returns (CreateRouteResponse){
+    option (google.api.http)={
+      post:"/createroute"
+      body:"*"
+    };
+  };
+
+  rpc ReadRoute(ReadRouteRequest) returns (ReadRouteResponse){
+    option (google.api.http)={
+      get:"/readroute/{route_id}"
+    };
+  };
+  rpc UpdateRoute(UpdateRouteRequest) returns (UpdateRouteResponse){
+    option (google.api.http)={
+      put:"/updateroute"
+      body:"*"
+    };
+  };
+  rpc DeleteRoute(DeleteRouteRequest) returns (DeleteRouteResponse){
+    option (google.api.http)={
+      delete:"/deleteroute/{route_id}"
+    };
+  };
+
+//BusRouteStop apis
+  rpc CreateBusRouteStop(CreateBusRouteStopRequest) returns (CreateBusRouteStopResponse){
+    option (google.api.http)={
+      post:"/createbusRouteStop"
+      body:"*"
+    };
+  };
+
+  rpc ReadBusRouteStop(ReadBusRouteStopRequest) returns (ReadBusRouteStopResponse){
+    option (google.api.http)={
+      get:"/readbusRouteStop/{busRouteStop_id}"
+    };
+  };
+  rpc UpdateBusRouteStop(UpdateBusRouteStopRequest) returns (UpdateBusRouteStopResponse){
+    option (google.api.http)={
+      put:"/updatebusRouteStop"
+      body:"*"
+    };
+  };
+  rpc DeleteBusRouteStop(DeleteBusRouteStopRequest) returns (DeleteBusRouteStopResponse){
+    option (google.api.http)={
+      delete:"/deletebusRouteStop/{busRouteStop_id}"
+    };
+  };
+
+  //Trip Api's
+  rpc CreateTrip(CreateTripRequest) returns (CreateTripResponse){
+    option (google.api.http)={
+      post:"/createtrip"
+      body:"*"
+    };
+  };
+
+  rpc ReadTrip(ReadTripRequest) returns (ReadTripResponse){
+    option (google.api.http)={
+      get:"/readtrip/{trip_id}"
+    };
+  };
+  rpc UpdateTrip(UpdateTripRequest) returns (UpdateTripResponse){
+    option (google.api.http)={
+      put:"/updatetrip"
+      body:"*"
+    };
+  };
+  rpc DeleteTrip(DeleteTripRequest) returns (DeleteTripResponse){
+    option (google.api.http)={
+      delete:"/deletetrip/{trip_id}"
+    };
+  };
+
+
+//Booking
+  rpc CreateBooking(CreateBookingRequest) returns (CreateBookingResponse){
+    option (google.api.http)={
+      post:"/createbooking"
+      body:"*"
+    };
+  };
+
+  rpc ReadBooking(ReadBookingRequest) returns (ReadBookingResponse){
+    option (google.api.http)={
+      get:"/readbooking/{booking_id}"
+    };
+  };
+  rpc UpdateBooking(UpdateBookingRequest) returns (UpdateBookingResponse){
+    option (google.api.http)={
+      put:"/updatebooking"
+      body:"*"
+    };
+  };
+  rpc DeleteBooking(DeleteBookingRequest) returns (DeleteBookingResponse){
+    option (google.api.http)={
+      delete:"/deletebooking/{booking_id}"
+    };
+  };
+
+  //Logout user and driver
+      rpc Driverlogout(UserLogoutRequest) returns (DriverLogoutResponse){
+  option (google.api.http)={
+  get:"/driverlogout/{User_id}"
+      };
+      };
+
+      rpc Userlogout(UserLogoutRequest) returns (UserLogoutResponse){
+  option (google.api.http)={
+  get:"/userlogout/{User_id}"
+      };
+      };
+      //GetAllBookingByUser
+  rpc  GetAllBookingByUser(GetAllBookingByUserRequest) returns (GetAllBookingByUserResponse){
+    option (google.api.http)={
+      get:"/userbookings/{User_id}"
+    };
+  };
+
+}

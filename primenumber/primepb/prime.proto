@@ -1,0 +1,16 @@
+syntax="proto3";
+package primenumber;
+import "google/api/annotations.proto";
+option  go_package="./primenumber/primepb";
+message Number{
+  int32 num=1;
+}
+message primeRequest{
+  Number number=1;
+}
+message primemultipleResponse{
+ int32  result=1;
+}
+service primeService{
+  rpc Prime(primeRequest) returns (stream primemultipleResponse){};
+}

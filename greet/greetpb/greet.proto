@@ -1,0 +1,49 @@
+syntax = "proto3";
+package  greet;
+option  go_package="./greet/greetpb";
+
+message Greeting{
+  string first_name=1;
+  string  last_name=2;
+}
+message GreetRequest{
+  Greeting greetiung =1;
+}
+message GeetResponse{
+  string  result=1;
+}
+message GreetManytimesRequest{
+Greeting greeting=1;
+}
+
+message GreetManytimesResponse{
+  string result=1;
+}
+message LongGreetrequest{
+  Greeting greeting=1;
+}
+message LongGreetResponse{
+  string result=1;
+}
+message GreetEveryoneRequest{
+  Greeting greeting=1;
+}
+message  GreetEveryoneResponse{
+  string result=1;
+}
+message GreetWithDeadlinesRequest{
+  Greeting greeting=1;
+}
+message GreetWithDeadlinesResponse{
+  string  result=1;
+}
+
+service GreetService{
+  rpc Greet(GreetRequest) returns (GeetResponse){};
+//uranary deadline
+rpc GreetWithDeadlines(GreetWithDeadlinesRequest) returns (GreetWithDeadlinesResponse){};
+  rpc GreetManytimes(GreetManytimesRequest) returns (stream GreetManytimesResponse){};
+  rpc LongGreet(stream LongGreetrequest) returns (LongGreetResponse){};
+rpc GreetEveryone(stream GreetEveryoneRequest) returns (stream GreetEveryoneResponse){};
+
+}

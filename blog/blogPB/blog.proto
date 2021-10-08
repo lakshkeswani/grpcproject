@@ -1,0 +1,69 @@
+syntax="proto3";
+package  blog;
+
+option go_package="./blog/blogPB";
+import "google/api/annotations.proto";
+
+message Blog{
+  string id=1;
+  string author_id=2;
+  string title=3;
+  string  content=4;
+}
+
+message CreateBlogRequest{
+  Blog blog=1;
+}
+message CreateBlogResponse{
+  Blog blog=1;
+}
+message ReadBlogRequest{
+  string blog_id=1;
+}
+message ReadBlogResponse{
+  Blog blog=1;
+}
+message DeleteBlogRequest{
+  string blog_id=1;
+}
+message DeleteBlogResponse{
+  string result=1;
+}
+
+message UpdateBlogRequest{
+  Blog blog=1;
+}
+message UpdateBlogResponse{
+  Blog blog=1;
+}
+message ListBlogRequest{
+
+}
+  message ListBlogResponse{
+  Blog blog=1;
+}
+service BlogService{
+  rpc CreateBlog(CreateBlogRequest) returns (CreateBlogResponse){
+    option (google.api.http)={
+    post:"/createblog"
+      body:"*"
+    };
+  };
+  rpc ReadBlog(ReadBlogRequest) returns (ReadBlogResponse){
+    option (google.api.http)={
+      get:"/readblog/{blog_id}"
+    };
+  };
+  rpc UpdateBlog(UpdateBlogRequest) returns (UpdateBlogResponse){
+    option (google.api.http)={
+      put:"/updateblog"
+      body:"*"
+    };
+  };
+  rpc DeleteBlog(DeleteBlogRequest) returns (DeleteBlogResponse){
+    option (google.api.http)={
+      delete:"/deleteblog/{blog_id}"
+    };
+  };
+  rpc ListBlog(ListBlogRequest) returns (stream ListBlogResponse);
+}
